@@ -1,0 +1,18 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "es.unizar.tmdad.akka.ex0.Principal"
+
+dependencies {
+	compile group: 'com.typesafe.akka', name: 'akka-actor_2.10', version: '2.3.8'
+	compile group: 'org.scala-lang', name: 'scala-library', version: '2.10.4'
+}
